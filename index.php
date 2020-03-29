@@ -303,7 +303,7 @@ $result2 = $db->query("SELECT * FROM illicit_locations");
     
 
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWX-p4fDBlWenHRMR7we4S5U62FjZl7Lo&callback=initMap">;
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">;
 
 </script>
 
