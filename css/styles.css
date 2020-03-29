@@ -1,0 +1,39 @@
+#myTable {
+  margin-top: 10px;
+
+}
+
+.tableFixHead {
+  overflow-y: auto;
+  height: 250px;
+  
+}
+
+.tableFixHead table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tableFixHead th,
+.tableFixHead td {
+  padding: 0px 0px;
+}
+
+.tableFixHead th {
+  position: sticky;
+  text-align: center;
+  top: 00;
+  background: rgb(218, 214, 214);
+}
+
+
+tbody {
+  display:block;
+  height:400px;
+  overflow:auto;
+}
+thead, tbody tr {
+  display:table;
+  width:100%;
+  table-layout:fixed;
+}
