@@ -69,11 +69,17 @@
             <li class="nav-item">
 				<a class="nav-link" href='leg_vs_il.php'>Legit Map Overlay</a>
 			</li>
+            <li class="nav-item">
+				<a class="nav-link" href='rub_reviews.php'>Illicit Reviews</a>
+            </li>
+            <li class="nav-item">
+				<a class="nav-link" href='rub_usa.php'>USA Mapped</a>
+			</li>
 			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manage Content</a>
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-					<a class="dropdown-item" href='submit.php'>Upload</a>
-					<a class="dropdown-item" href='delete.php'>Delete</a>
+					<a class="dropdown-item" href='the_project.php'>The Project</a>
+					<a class="dropdown-item" href='the_data.php'>The Data</a>
 				</div> <!--	end of dropdown-menu -->		  
 			</li>
 		 </ul>

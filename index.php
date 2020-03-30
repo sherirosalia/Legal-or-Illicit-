@@ -162,7 +162,7 @@ $result2 = $db->query("SELECT * FROM illicit_locations");
 
         <div class="col-md-12 ">
             <!-- <div class="card card mb-3 border-0"> -->
-                <div class="tableFixHead" id="myTable">
+                <div class="tableFixHead" id="myTable" style="">
                 <section>
                     <table class="table table-hover table table-striped ">
                     <thead class="thead-dark">
@@ -303,7 +303,7 @@ $result2 = $db->query("SELECT * FROM illicit_locations");
     
 
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">;
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWX-p4fDBlWenHRMR7we4S5U62FjZl7Lo&callback=initMap">;
 
 </script>
 
