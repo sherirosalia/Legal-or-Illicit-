@@ -29,25 +29,6 @@ $result2 = $db->query("SELECT * FROM illicit_locations");
 
   
   ?>
-<!-- <!doctype html>
-<html>
-
-<head> -->
-    <title>The Data</title>
-    <style>
-        *  {
-            margin: 0;
-            padding: 0;
-        }
-        #mapCanvas{
-
-            height: 600px;
-            width: 100%;
-        }
-    </style>
-
-</head>
-<body>
 
 <div class="container">
     <div class="jumbotron bg-danger bg-gradient-secondary">
@@ -73,7 +54,7 @@ $result2 = $db->query("SELECT * FROM illicit_locations");
         <div class="col-md-12 align-self ">
             
             <!-- <div class="card card mb-3 border-0"> -->
-                <h2>The Data</h2>
+                <h4>The Data</h4>
                 
                 <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
                 no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
