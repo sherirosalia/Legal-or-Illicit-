@@ -2,15 +2,15 @@
 <?php echo '
 
 <footer class="page-footer font-small blue">
-    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+ <div class="footer-copyright text-center py-3">© 2019 Copyright:
     
-        <a href="http://www.sherirosalia.com"><img src ="resources/rosalia.jpg" height="20px" width="20px" alt="rose logo">Not So Santa Rosalia</a>
-    </div>   
-</footer>';
+<a href="http://www.sherirosalia.com"><img src ="resources/rosalia.jpg" height="20px" width="20px" alt="rose logo">Not So Santa Rosalia</a>
+</div>   
+ </footer>';
 
 ?>
 
-   <!-- <a class="navbar-brand" href=""><img src ="assets/rosalia.jpg" height="20px" width="20px" alt="rose logo"> -->
+<!-- <a class="navbar-brand" href=""><img src ="assets/rosalia.jpg" height="20px" width="20px" alt="rose logo"> -->
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

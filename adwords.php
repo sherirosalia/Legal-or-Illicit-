@@ -31,44 +31,42 @@ if ($query->execute()) {
   while ($row = $query->fetch(PDO::FETCH_ASSOC) )
     {
       extract($row);
-      // $json[]=array_slice($key_word, 0, 10);
-      // $json2[]=array_slice($frequency, 0, 10);
+
       $json[]=$key_word;
-      $json2[]=(int)$frequency;
-     
-      
-     
+
     } 
   }
-    //echo json_encode($json);
+
     $word_list = json_encode($json);
     $counts = json_encode($json2);
-    
-    // echo $word_list . '<br>' . $counts;
-  
-  
-  // echo json_encode($json2);
-    // var_dump($json);
-    // var_dump($json2);
-  
+
   
   ?>
 <div class="container">
-    <div class="jumbotron bg-danger bg-gradient-secondary">
-        <div class="container">
-            <h1 class="display-4 text-white" >Identifying Illicit Adwords</h1>
-            <p class="lead text-white">Data science applied to identifying the bad actors in the illicit sex and human trafficking trade which seem to be increasingly operating from shadows of the spa industry.            
-            </p>
-            <p class="lead text-white">           
-            </p>
-        </div>
-    </div>
-    <!-- end of jumbotron -->
+      <div class="jumbotron bg-danger bg-gradient-secondary">
+          <div class="container">
+              <h1 class="display-4 text-white" >Identifying Illicit Adwords</h1>
+              <p class="lead text-white">Data science applied to identifying the bad actors in the illicit sex and human trafficking trade which seem to be increasingly operating from shadows of the spa industry.            
+              </p>
+              <p class="lead text-white">           
+              </p>
+          </div>
+      </div>
+</div>
+<!-- end of jumbotron -->
 
-<!-- <div class="container"> -->
+
+<div class='container'>
+      <!-- creating some space and a thin line -->
+      <div class='col-md-6 col-md-offset-3'></div>
+      <div class="clearfix"><hr class="col-xs-12"> </div>
+      <div class='col-md-6 col-md-offset-3'></div>
+</div>
+<!-- end of creating space -->
+<div class="container">
     <div class="row">
-        <div class="col-md-5">
-          <a href="templates/word_cloud.php" class="text-muted"><h2>100 Word Cloud</h2></a>
+        <div class="col-md-12">
+          <h5>Rubratings ads </h5>
           <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
             no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
             Summo abhorreant in his, ea habeo ullum conclusionemque sed. At per alii prompta, nominavi necessitatibus est ea.
@@ -76,38 +74,174 @@ if ($query->execute()) {
             vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an. Summo abhorreant in his, ea habeo ullum conclusionemque 
             sed. At per alii prompta, nominavi necessitatibus est ea.
           </p>
-        </div>        <!-- end of word cloud paragraph div -->
-
-        <div class="col-md-7 float-right"> 
-                <img src="resources/100_word_cloud.png" style="max-width:100%;
-              height:auto;" class="float-right img-fluid" alt="Responsive image">
-        </div>         <!-- end of word cloud image div -->
+        </div>        
+    </div>
+</div>
+<div class="container">
   
-     </div> <!-- end of word cloud row  -->
-
-
-<div class="clearfix"> <hr class="col-xs-12"></div>
-
-<!-- add dividing line -->
-
-<!-- beginning of top 100 word association table -->
 
   <div class="row">
-        <div class="col-md-8 align-self float-left">
-              <a href="templates/top_100_table.php" class="text-muted"><h2>Most Frequent 100</h2></a>
-                <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
-                no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="data_image/rubratings.png"  target="_blank">
+          <img src="data_image/rubratings.png"  alt="meimin" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="data_image/rubrate_enter-opt.jpg"  target="_blank">
+          <img src="data_image/rubrate_enter-opt.jpg"  alt="camtc" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="data_image/rubrat_sample-opt.jpg"  target="_blank">
+          <img src="data_image/rubrat_sample-opt.jpg"  alt="sd biz" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- creating some space and a thin line -->
+<div class='col-md-6 col-md-offset-3'></div>
+    <div class="clearfix"><hr class="col-xs-12"> </div>
+    <div class='col-md-6 col-md-offset-3'></div>
+</div>
+
+<div class='container'>
+  <div class="row">
+
+    
+    <div class="col-md-12">
+          
+          <!-- <div class="card card mb-3 border-0"> -->
+          <h2>2400 Lines of Ads</h2>
+                  <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
+                  no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
                   Summo abhorreant in his, ea habeo ullum conclusionemque sed. At per alii prompta, nominavi necessitatibus est ea.
-                Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, no duis molestiae 
-                vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an. Summo abhorreant in his, ea habeo ullum conclusionemque 
-                sed. At per alii prompta, nominavi necessitatibus est ea.
-                </p>
-          </div>    <!-- end 100 paragraph -->      
-        
+                  Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, no duis molestiae 
+                  vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an. Summo abhorreant in his, ea habeo ullum conclusionemque 
+                  sed. At per alii prompta, nominavi necessitatibus est ea.</p>
+    </div>
+    
+  </div>
+</div>
+
+<div class='container'>
+ <div class="row">
+  <div class="col-md-1"></div>
+      <div class="col-md-10">
+            <div class="tableFixHead" id="myTable">
+              <section>
+                <table class="table table-hover table table-striped ">
+                  <thead class="thead-dark">
+                      <tr>
+                        <th>Illicit Ads: Line by Line</th>
+                      </tr>
+                  </thead> 
+
+                            <?php
+                            $query = $dbh->prepare("SELECT * FROM ad_lines ORDER BY id ASC");
+                            //$query = $dbh->prepare("SELECT * FROM ad_words WHERE id BETWEEN 0 AND 15");
+                            $query->bindParam(':id', $id);
+                            $query->bindParam(':ad_lines', $ad_lines);
+                            //$query->bindParam(':key_word', $key_word);
+
+
+                            if ($query->execute()) {
+
+                            while ($row = $query->fetch(PDO::FETCH_ASSOC) )
+                            // var_dump($row['frequency']);
+
+                              {
+                                    echo '<tr>
+                                
+                                <td class="title">'.$row['ad_lines'].'</td>
+                                
+                                
+                                ';
+                                }//end of query
+                                
+                                //$dbh=NULL;
+
+                                
+                              
+                              } else {
+                                print '<p style="color: red;">Connection Error</p>';
+                            }
+
+                              ?>
+
+                            </tr> 
+                      </table>
+                    </section>
+                  <!-- </div> end of card  -->
+                </div> <!-- end of table div -->
+        </div> <!-- end of adlines table column  -->
+                
+    </div>   <!-- end of adlines table row -->
+
+  </div>   <!-- end of table-->
+  <div class="col-md-1"></div>
+  </div>
+</div>
+
+<div class='container'>
+      <!-- creating some space and a thin line -->
+      <div class='col-md-6 col-md-offset-3'></div>
+      <div class="clearfix"><hr class="col-xs-12"> </div>
+      <div class='col-md-6 col-md-offset-3'></div>
+</div>
+
+  <div class="container">
+      <div class="row">
+    
+          <div class="col-md-12">
+            <h5>100 Word Cloud</h5>
+            <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
+              no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
+              Summo abhorreant in his, ea habeo ullum conclusionemque sed. At per alii prompta, nominavi necessitatibus est ea.
+              Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, no duis molestiae 
+              vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an. Summo abhorreant in his, ea habeo ullum conclusionemque 
+              sed. At per alii prompta, nominavi necessitatibus est ea.
+            </p>
+          </div>        <!-- end of word cloud paragraph div -->
+      
+  </div>
+</div>
+
+<div class='container'>
+      <!-- creating some space and a thin line -->
+      <div class='col-md-6 col-md-offset-3'></div>
+      <div class="clearfix"><hr class="col-xs-12"> </div>
+      <div class='col-md-6 col-md-offset-3'></div>
+</div>
+<!-- end of creating space -->
+<div class='container'>
+<div class='row'>
+      <div class="col-md-8 float-left"> 
+              <img src="resources/100_word_cloud.png" style="max-width:100%;
+            height:auto;" class="float-left img-fluid" alt="Responsive image">
+      </div>         <!-- end of word cloud image div -->
+
+
 
       <div class="col-md-4 float-right">
           <!-- <div class="card card mb-3 border-0"> -->
-            <div class="tableFixHead" id="myTable">
+            <div class="tableFixHead" id="myTable" style="height:350px;">
               <section>
                 <table class="table table-hover table table-striped ">
                   <thead class="thead-dark">
@@ -159,15 +293,20 @@ if ($query->execute()) {
           </div> <!-- end of table div -->
         </div> <!-- end of 100 table column  -->
   </div> <!-- end of word association row -->
+    
+  </div> <!-- end of word cloud row  -->
 
 
-<div class="clearfix"><hr class="col-xs-12"> </div>
-   <!-- add dividing line -->
+<!-- creating some space and a thin line -->
+<div class='col-md-6 col-md-offset-3'></div>
+    <div class="clearfix"><hr class="col-xs-12"> </div>
+    <div class='col-md-6 col-md-offset-3'></div>
+</div>
 
-   <div class="row"> 
-        <div class="col-md align-self">                
-                <!-- <div class="card card mb-3 border-0"> -->
-                <a href="templates/pie_top_15_illicit_words.php" class="text-muted"> <h2>The top 15 illicit ad words.</h2></a>
+<div class='container'>
+  <div class="row"> 
+        <div class="col-md-12 ">                
+                <h5>The top 15 illicit ad words</h5>
                         <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
                         no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
                         Summo abhorreant in his, ea habeo ullum conclusionemque sed. At per alii prompta, nominavi necessitatibus est ea.
@@ -177,175 +316,10 @@ if ($query->execute()) {
                         </p>
           </div> <!-- end of pie chart text paragraph div  -->
   </div>  <!-- end of pie chart description paragraph row  -->
-    <div class="row"> 
-        <div class="col-md"> 
-        <!-- <div class="col-8 float-right"> -->
-          <!-- <div class="card card mb-3 border-0"> -->
-              <div id="canvas-holder" style="width:100%"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-              <canvas id="pieChart" style="display: block; height: 400x; width: 400px;"  class="chartjs-render-monitor"></canvas>
-          <!-- </div> -->
-        <!-- </div> -->
+</div> 
 
 
 
-          
-      </div>  <!-- end of pie chart row  -->
-
-
-<div class="clearfix"><hr class="col-xs-12"> </div>
-   <!-- add dividing line -->
-
-
-
- <div class="row">
-
-
-      <div class="col-md-5 align-self float-left">
-          
-          <!-- <div class="card card mb-3 border-0"> -->
-          <a href="templates/adlines.php"><h2>2400 Lines of Ads</h2></a>
-                  <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
-                  no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
-                   Summo abhorreant in his, ea habeo ullum conclusionemque sed. At per alii prompta, nominavi necessitatibus est ea.
-                  Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, no duis molestiae 
-                  vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an. Summo abhorreant in his, ea habeo ullum conclusionemque 
-                  sed. At per alii prompta, nominavi necessitatibus est ea.</p>
-      </div>
-
-      <div class="col-md-7 float-right">
-          <!-- <div class="card card mb-3 border-0"> -->
-            <div class="tableFixHead" id="myTable">
-              <section>
-                <table class="table table-hover table table-striped ">
-                  <thead class="thead-dark">
-                      <tr>
-                        <th>Illicit Ads: Line by Line</th>
-                      </tr>
-                  </thead> 
-
-                            <?php
-                            $query = $dbh->prepare("SELECT * FROM ad_lines ORDER BY id ASC");
-                            //$query = $dbh->prepare("SELECT * FROM ad_words WHERE id BETWEEN 0 AND 15");
-                            $query->bindParam(':id', $id);
-                            $query->bindParam(':ad_lines', $ad_lines);
-                            //$query->bindParam(':key_word', $key_word);
-
-
-                            if ($query->execute()) {
-
-                            while ($row = $query->fetch(PDO::FETCH_ASSOC) )
-                            // var_dump($row['frequency']);
-
-                              {
-                                    echo '<tr>
-                                
-                                <td class="title">'.$row['ad_lines'].'</td>
-                                
-                                
-                                ';
-                                }//end of query
-                                
-                                //$dbh=NULL;
-
-                                
-                              
-                              } else {
-                                print '<p style="color: red;">Connection Error</p>';
-                            }
-
-                              ?>
-
-                            </tr> 
-                      </table>
-                    </section>
-                  <!-- </div> end of card  -->
-                </div> <!-- end of table div -->
-              </div> <!-- end of adlines table column  -->
-                
-        </div>   <!-- end of adlines table row -->
-
-</div>   <!-- end of main container-->
-
-</div>   <!-- end of main container-->
-
-
-
-   
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" integrity="sha256-TQq84xX6vkwR0Qs1qH5ADkP+MvH0W+9E7TdHJsoIQiM=" crossorigin="anonymous"></script>
-<script type="text/javascript"> 
-let ctx = document.getElementById('pieChart').getContext('2d');
-let chart = new Chart(ctx, {
-    type: 'pie',
-    
-
-    
-    data : {
-    
-    datasets: [{
-        
-        backgroundColor: [
-              "#9933FF",
-              "#CC00CC",
-              "#99FF33",
-              "#FF8000",
-              "#E71f63",
-              "#FF2400",
-              "#66b2ff",
-              "#CCE5FF",
-              "#FF0000",
-              "#ffb288",
-              "#B22222",
-              "#FF66B2",
-              "#CC99FF",
-              "#f0592b",
-              "#46BFBD",
-              "#a70000"
-              
-            ],
-        data: <?php echo $counts; ?>,
-        label:<?php echo $word_list; ?>,
-        
-    }],
-    labels: <?php echo $word_list; ?>,
-    // These labels appear in the legend and in the tooltips when hovering different arcs
-    
-},
-options: {
-  layout: {
-            padding: {
-                left: 0,
-                right: 0,
-                top: 0,
-                bottom: 0
-            }
-        },
-
-  title: {
-                display: true,
-                text: 'Top Fifteen Adwords',
-                fontSize: 18,
-                fontFamily: 'sans-serif',
-                fontColor: '#666',
-                fontStyle: 'bold',
-                padding: 0,
-                position: 'right',
-                
-            },
-
-      responsive: true,
-      
-      legend: { 
-      
-        
-        position: 'right',
-        
-        
-    }
-  }
-
-});
-     
-</script>
 
 
 

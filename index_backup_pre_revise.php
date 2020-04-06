@@ -1,12 +1,11 @@
 <?php 
 session_start();
-    
-
 error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
-$title = "illicit reviews";
+$title = "Home Page";
 include_once 'templates/header.php';
 $conn = include('config.php'); 
+
 // echo 'connected to database';
 	  
 if(!$conn) //verify database connection
@@ -19,68 +18,48 @@ elseif($conn){
     // echo 'connected to database';
 }
 
-//$query = $dbh->prepare("SELECT * FROM ad_words ORDER BY id ASC");
-$query = $dbh->prepare("SELECT * FROM review_10 WHERE id BETWEEN 0 AND 10");
-$query->bindParam(':frequency', $frequency);
-$query->bindParam(':keyword', $keyword);
-$query->bindParam(':id', $id);
-
-if ($query->execute()) {
-  $json=[];
-  $json2=[];
-  while ($row = $query->fetch(PDO::FETCH_ASSOC) )
-    {
-      extract($row);
-      // $json[]=array_slice($key_word, 0, 10);
-      // $json2[]=array_slice($frequency, 0, 10);
-      $json[]=$keyword;
-      $json2[]=(int)$frequency;
-     
-      
-     
-    } 
-  }
-    //echo json_encode($json);
-    $word_list = json_encode($json);
-    $counts = json_encode($json2);
-    
-    // echo $word_list . '<br>' . $counts;
-  
-  
-  // echo json_encode($json2);
-    // var_dump($json);
-    // var_dump($json2);
-   
+ 
 // Fetch the marker info from the database 
 $result = $db->query("SELECT * FROM illicit_locations"); 
  
 // Fetch the info-window data from the database 
 $result2 = $db->query("SELECT * FROM illicit_locations"); 
+
+
+
   
   ?>
+
+
 <div class="container">
     <div class="jumbotron bg-danger bg-gradient-secondary">
         <div class="container">
-            <h1 class="display-4 text-white" >Illicit Locations Reviewed</h1>
-            <p class="lead text-white">Data science applied to identifying the bad actors 
-            in the illicit sex and human trafficking trade which seem to be increasingly operating from shadows of the spa industry.            
+            <h1 class="display-4 text-white" >Identifying Illicit Locations</h1>
+            <p class="lead text-white">Data science applied to identifying the bad actors in the illicit sex and human trafficking trade which seem to be increasingly operating from shadows of the spa industry.            
             </p>
             <p class="lead text-white">           
             </p>
         </div>
     </div>
+    </div>
     <!-- end of jumbotron -->
 
-
+    <!-- beginning of creating space -->
+<div class='container'>
+    <!-- creating some space and a thin line -->
+    <div class='col-md-6 col-md-offset-3'></div>
+    <!-- <div class="clearfix"><hr class="col-xs-12"> </div> -->
+    <div class='col-md-6 col-md-offset-3'></div>
+</div>
 <!-- end of creating space -->
+
 <div class="container">
     <div class="row">
 
         <div class="col-md-12 align-self ">
             
             <!-- <div class="card card mb-3 border-0"> -->
-           
-                <h5>Permeating San Diego: Sexual Massage Locations</h5>
+                <h5>Permeating San Diego: Illicit Massage Locations</h5>
                 
                 <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
                 no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
@@ -91,7 +70,10 @@ $result2 = $db->query("SELECT * FROM illicit_locations");
         </div>
     </div>
 </div> 
-<!-- end of permeating container -->
+</div> 
+<!-- end of permeating intro container -->
+
+
 
 <!-- beginning of creating space -->
 <div class='container'>
@@ -102,7 +84,6 @@ $result2 = $db->query("SELECT * FROM illicit_locations");
 </div>
 <!-- end of creating space -->
 
-<!-- beginning of google rubmaps display -->
 <div class="container">
  <div class="row">
 
@@ -110,7 +91,7 @@ $result2 = $db->query("SELECT * FROM illicit_locations");
       <div class="col-md-4 align-self float-left">
           
           <!-- <div class="card card mb-3 border-0"> -->
-          <h5>Rubmaps Locations</h5>
+          <h5>Illicit Locations Reviewed and Mapped</h5>
                   <p>Rubmaps.....olestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
                    Summo abhorreant in his, ea habeo ullum conclusionemque sed. At per alii prompta, nominavi necessitatibus est ea.
                   Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, no duis molestiae 
@@ -125,8 +106,6 @@ $result2 = $db->query("SELECT * FROM illicit_locations");
         </div>   <!-- end of iframe -->
     </div>   <!-- end of row -->
 </div>   <!-- end of container -->
-<!-- end of google rubmaps display -->
-
 
 <!-- beginning of creating space -->
 <div class='container'>
@@ -136,13 +115,8 @@ $result2 = $db->query("SELECT * FROM illicit_locations");
     <div class='col-md-6 col-md-offset-3'></div>
 </div>
 
+
 <!-- beginning of table heading -->
-<div class='container'>
-    
-    <div class='col-md-6 col-md-offset-3'></div>
-    <div class="clearfix"><h4>SENSITIVE VIEWER WARNING: The following may be disturbing and has explicit content</h4><hr class="col-xs-12"> </div>
-    <div class='col-md-6 col-md-offset-3'></div>
-</div>
 
 <div class="container">
     <div class="row">
@@ -150,7 +124,7 @@ $result2 = $db->query("SELECT * FROM illicit_locations");
         <div class="col-md-12 align-self ">
             
             <!-- <div class="card card mb-3 border-0"> -->
-                <h5>Table of rubmaps locations</h5>
+                <h5>Table of locations</h5>
                 
                 <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
                 no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
@@ -221,6 +195,7 @@ $result2 = $db->query("SELECT * FROM illicit_locations");
 </div>
 
 
+
 <!-- beginning of creating space -->
 <div class='container'>
     <!-- creating some space and a thin line -->
@@ -229,14 +204,14 @@ $result2 = $db->query("SELECT * FROM illicit_locations");
     <div class='col-md-6 col-md-offset-3'></div>
 </div>
 <!-- end of creating space -->
+
 <div class="container">
     <div class="row">
 
         <div class="col-md-12 align-self ">
             
             <!-- <div class="card card mb-3 border-0"> -->
-                                
-                <h5>Permeating San Diego: Sexual Massage Locations</h5>
+                <h5>The Network</h5>
                 
                 <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
                 no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
@@ -246,7 +221,26 @@ $result2 = $db->query("SELECT * FROM illicit_locations");
                 sed. At per alii prompta, nominavi necessitatibus est ea.</p>
         </div>
     </div>
-</div> 
+
+ <div class="row">
+ 
+
+      <div class="col-md-12" id="display" style="height: 600px; width: 100%;">
+        
+
+        <?php include('html_inclusions/rubmaps_user_map.php'); ?>
+
+      </div>
+
+        <div class="col-md-1"></div>
+
+
+           
+            
+        </div>   <!-- end of html div -->
+    </div>   <!-- end of row -->
+</div>   <!-- end of container -->
+
 
 <!-- beginning of creating space -->
 <div class='container'>
@@ -255,96 +249,38 @@ $result2 = $db->query("SELECT * FROM illicit_locations");
     <div class="clearfix"><hr class="col-xs-12"> </div>
     <div class='col-md-6 col-md-offset-3'></div>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-          <h5>How the search for illicit places works</h5>
-          <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
-            no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
-            Summo abhorreant in his, ea habeo ullum conclusionemque sed. At per alii prompta, nominavi necessitatibus est ea.
-            Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, no duis molestiae 
-            vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an. Summo abhorreant in his, ea habeo ullum conclusionemque 
-            sed. At per alii prompta, nominavi necessitatibus est ea.
-          </p>
-        </div>        
-      </div>
-      </div>
-<div class="container">
-  
+<!-- end of creating space -->
 
-  <div class="row">
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="resources/rubmap_search.png"  target="_blank">
-          <img src="resources/rubmap_search.png"  alt="meimin" style="width:100%">
-          <div class="caption">
-            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="data_image/ch_wom.png"  target="_blank">
-          <img src="data_image/ch_wom.png"  alt="camtc" style="width:100%">
-          <div class="caption">
-            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="data_image/lb_footcaere.png"  target="_blank">
-          <img src="data_image/lb_footcare.png"  alt="sd biz" style="width:100%">
-          <div class="caption">
-            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- beginning advice table -->
+<div class='container'>
+<div class="row">
 
-<!-- creating some space and a thin line -->
-<div class='col-md-6 col-md-offset-3'></div>
-    <div class="clearfix"><hr class="col-xs-12"> </div>
-    <div class='col-md-6 col-md-offset-3'></div>
-<!-- </div> -->
-
-
-<!-- add dividing line -->
-
-<!-- beginning of top 100 word association table -->
-
-  <div class="row">
-        <div class="col-md-12">
-          <h5>What the reviews are like</h5>
-            <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
-            no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
-              Summo abhorreant in his, ea habeo ullum conclusionemque sed. At per alii prompta, nominavi necessitatibus est ea.
-            Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, no duis molestiae 
-            vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an. Summo abhorreant in his, ea habeo ullum conclusionemque 
-            sed. At per alii prompta, nominavi necessitatibus est ea.
-            </p>
-          </div>    <!-- end reviews paragraph and header div--> 
-  </div>     
-  <div class="row">
-      <div class="col-md-1"> </div>     
-
-      <div class="col-md-10 ">
+        <div class="col-md-12 align-self float-left">
+              <h5>How They Advise Each Other</h5>
+                <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
+                no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
+                  Summo abhorreant in his, ea habeo ullum conclusionemque sed. At per alii prompta, nominavi necessitatibus est ea.
+                Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, no duis molestiae 
+                vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an. Summo abhorreant in his, ea habeo ullum conclusionemque 
+                sed. At per alii prompta, nominavi necessitatibus est ea.
+                </p>
+          </div>    <!-- end 100 paragraph -->      
+     
+<div class="row">
+<div class="col-md-1"></div>
+      <div class="col-md-10 float-right">
           <!-- <div class="card card mb-3 border-0"> -->
             <div class="" id="myTable">
               <section>
                 <table class="table table-hover table table-striped ">
                   <thead class="thead-dark">
                       <tr>
-                        <th> Reviews from Rubmaps</th>
+                        <th>Rubmaps Tips</th>
                       </tr>
                   </thead> 
                 
                 
-                  <!-- PHP TO POPULATE TOP 100 FREQUENT WORDS   -->
+                  <!-- PHP TO POPULATE ADVICE COLUMS   -->
                                       <?php
                                       $query = $dbh->prepare("SELECT * FROM rub_reviews ORDER BY id ASC");
                                       //$query = $dbh->prepare("SELECT * FROM ad_words WHERE id BETWEEN 0 AND 15");
@@ -383,198 +319,133 @@ $result2 = $db->query("SELECT * FROM illicit_locations");
               </section>
             <!-- </div> end of card  -->
           </div> <!-- end of table div -->
-
         </div> <!-- end of table column  -->
-        <div class="col-md-1"> </div>   
+        <div class="col-md-1"></div>
   </div> <!-- end of word association row -->
 
-
-<div class="clearfix"><hr class="col-xs-12"> </div>
-   <!-- add dividing line -->
-
-   <div class="row"> 
-        <div class="col-md align-self">                
-                <!-- <div class="card card mb-3 border-0"> -->
-                 <h2>The top 15 illicit ad words.</h2>
-                        <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
-                        no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
-                        Summo abhorreant in his, ea habeo ullum conclusionemque sed. At per alii prompta, nominavi necessitatibus est ea.
-                        Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, no duis molestiae 
-                        vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an. Summo abhorreant in his, ea habeo ullum conclusionemque 
-                        sed. At per alii prompta, nominavi necessitatibus est
-                        </p>
-          </div> <!-- end of pie chart text paragraph div  -->
-  </div>  <!-- end of pie chart description paragraph row  -->
-    <div class="row"> 
-        <div class="col-md"> 
-        <!-- <div class="col-8 float-right"> -->
-          <!-- <div class="card card mb-3 border-0"> -->
-              <div id="canvas-holder" style="width:100%"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-              <canvas id="pieChart" style="display: block; height: 300x; width: 300px;"  class="chartjs-render-monitor"></canvas>
-          <!-- </div> -->
-        <!-- </div> -->
+</div>
+<!-- beginning of creating space -->
+<div class='container'>
+    <!-- creating some space and a thin line -->
+    <div class='col-md-6 col-md-offset-3'></div>
+    <div class="clearfix"><hr class="col-xs-12"> </div>
+    <div class='col-md-6 col-md-offset-3'></div>
+</div>
+<!-- end of creating space -->
 
 
+<div class="container">
+    <div class="row">
 
-          
-      </div>  <!-- end of pie chart row  -->
-
-
-<div class="clearfix"><hr class="col-xs-12"> </div>
-   <!-- add dividing line -->
-
-
+        <div class="col-md-12 align-self">
+            
+            <!-- <div class="card card mb-3 border-0"> -->
+                <h5>The Most Popular</h5>
+                
+                <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
+                no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
+                Summo abhorreant in his, ea habeo ullum conclusionemque sed. At per alii prompta, nominavi necessitatibus est ea.
+                Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, no duis molestiae 
+                vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an. Summo abhorreant in his, ea habeo ullum conclusionemque 
+                sed. At per alii prompta, nominavi necessitatibus est ea.</p>
+        </div>
+    </div>
 
  <div class="row">
+ 
 
+      <div class="col-md-12" id="display" style="height: 600px; width: 100%;">
+        
 
-      <div class="col-md-5 align-self float-left">
-          
-          <!-- <div class="card card mb-3 border-0"> -->
-          <h2>Top 10 Kewords</h2>
-                  <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
-                  no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
-                   Summo abhorreant in his, ea habeo ullum conclusionemque sed. At per alii prompta, nominavi necessitatibus est ea.
-                  Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, no duis molestiae 
-                  vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an. Summo abhorreant in his, ea habeo ullum conclusionemque 
-                  sed. At per alii prompta, nominavi necessitatibus est ea.</p>
+        <?php include('html_inclusions/locations_most_frequented_map.php'); ?>
+
       </div>
 
-      <div class="col-md-7 float-right">
-          <!-- <div class="card card mb-3 border-0"> -->
-            <div class="tableFixHead" id="myTable">
-              <section>
-                <table class="table table-hover table table-striped ">
-                  <thead class="thead-dark">
-                      <tr>
-                        <th>Most Popular Review Terms</th>
-                      </tr>
-                  </thead> 
-
-                            <?php
-                            $query = $dbh->prepare("SELECT * FROM review_10 ORDER BY frequency ASC");
-                            //$query = $dbh->prepare("SELECT * FROM ad_words WHERE id BETWEEN 0 AND 15");
-                            $query->bindParam(':id', $id);
-                            $query->bindParam(':keyword', $keyword);
-                            $query->bindParam(':frequency', $frequency);
-                            //$query->bindParam(':key_word', $key_word);
+        <div class="col-md-1"></div>
 
 
-                            if ($query->execute()) {
+           
+            
+        </div>   <!-- end of html div -->
+    </div>   <!-- end of row -->
+</div>   <!-- end of container -->
 
-                            while ($row = $query->fetch(PDO::FETCH_ASSOC) )
-                            // var_dump($row['frequency']);
+<!-- beginning of creating space -->
+<div class='container'>
+    <!-- creating some space and a thin line -->
+    <div class='col-md-6 col-md-offset-3'></div>
+    <div class="clearfix"><hr class="col-xs-12"> </div>
+    <div class='col-md-6 col-md-offset-3'></div>
+</div>
+<!-- end of creating space -->
 
-                              {
-                                    echo '<tr>
-                                
-                                <td class="title">'.$row['keyword'].'</td>
-                                <td class="entry">'.$row['frequency'].'</td>
-                                
-                                
-                                ';
-                                }//end of query
-                                
-                                //$dbh=NULL;
+<div class="container">
+    <div class="row">
 
-                                
-                              
-                              } else {
-                                print '<p style="color: red;">Connection Error</p>';
-                            }
-
-                              ?>
-
-                            </tr> 
-                      </table>
-                    </section>
-                  <!-- </div> end of card  -->
-                </div> <!-- end of table div -->
-              </div> <!-- end of reviews table column  -->
+        <div class="col-md-12 align-self">
+            
+            <!-- <div class="card card mb-3 border-0"> -->
+                <h5>The Women</h5>
                 
-        </div>   <!-- end of reviews table row -->
+                <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
+                no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
+                Summo abhorreant in his, ea habeo ullum conclusionemque sed. At per alii prompta, nominavi necessitatibus est ea.
+                Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, no duis molestiae 
+                vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an. Summo abhorreant in his, ea habeo ullum conclusionemque 
+                sed. At per alii prompta, nominavi necessitatibus est ea.</p>
+        </div>
+    </div>
 
-</div>   <!-- end of main container-->
+ <div class="row">
+ 
 
-</div>   <!-- end of main container-->
-
-
-
-   
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" integrity="sha256-TQq84xX6vkwR0Qs1qH5ADkP+MvH0W+9E7TdHJsoIQiM=" crossorigin="anonymous"></script>
-<script type="text/javascript"> 
-let ctx = document.getElementById('pieChart').getContext('2d');
-let chart = new Chart(ctx, {
-    type: 'pie',
-    
-
-    
-    data : {
-    
-    datasets: [{
+      <div class="col-md-12" id="display" style="height: 600px; width: 100%;">
         
-        backgroundColor: [
-              "#9933FF",
-              "#CC00CC",
-              "#99FF33",
-              "#FF8000",
-              "#E71f63",
-              "#FF2400",
-              "#66b2ff",
-              "#CCE5FF",
-              "#FF0000",
-              "#ffb288",
-              "#B22222",
-              "#FF66B2",
-              "#CC99FF",
-              "#f0592b",
-              "#46BFBD",
-              "#a70000"
-              
-            ],
-        data: <?php echo $counts; ?>,
-        label:<?php echo $word_list; ?>,
-        
-    }],
-    labels: <?php echo $word_list; ?>,
-    // These labels appear in the legend and in the tooltips when hovering different arcs
-    
-},
-options: {
-  layout: {
-            padding: {
-                left: 0,
-                right: 0,
-                top: 0,
-                bottom: 0
-            }
-        },
 
-  title: {
-                display: true,
-                text: 'Top Fifteen Adwords',
-                fontSize: 18,
-                fontFamily: 'sans-serif',
-                fontColor: '#666',
-                fontStyle: 'bold',
-                padding: 0,
-                position: 'right',
+        <?php include('html_inclusions/rubmaps_girls_map.php'); ?>
+
+      </div>
+
+        <div class="col-md-1"></div>
+
+
+           
+            
+        </div>   <!-- end of html div -->
+    </div>   <!-- end of row -->
+</div>   <!-- end of container -->
+
+
+
+
+<!-- creating some space and a thin line -->
+    <div class='col-md-6 col-md-offset-3'></div>
+    <div class="clearfix"><hr class="col-xs-12"> </div>
+    <div class='col-md-6 col-md-offset-3'></div>
+<!-- </div> -->
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-12 align-self ">
+            
+            <!-- <div class="card card mb-3 border-0"> -->
+                <h5>Explore the Journey</h5>
                 
-            },
+                <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
+                no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
+                Summo abhorreant in his, ea habeo ullum conclusionemque sed. At per alii prompta, nominavi necessitatibus est ea.
+                Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, no duis molestiae 
+                vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an. Summo abhorreant in his, ea habeo ullum conclusionemque 
+                sed. At per alii prompta, nominavi necessitatibus est ea.</p>
+        </div>
+    </div>
+</div> 
 
-      responsive: true,
-      
-      legend: { 
-      
-        
-        position: 'right',
-        
-        
-    }
-  }
 
-});
 
+<script>
     function initMap() {
         var map;
         var bounds = new google.maps.LatLngBounds();

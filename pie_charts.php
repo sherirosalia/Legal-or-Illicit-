@@ -2,29 +2,16 @@
 session_start();
 error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
-$title = "The Data";
+$title = "Illicit Massage Plot";
 include_once 'templates/header.php';
 $conn = include('config.php'); 
 
-// echo 'connected to database';
-	  
-if(!$conn) //verify database connection
-	
-{
-	die('cannot display quotes due to server error');
-} //end of connection 
-
-elseif($conn){
-    // echo 'connected to database';
-}
-
-  ?>
-
+?>
 
 <div class="container">
     <div class="jumbotron bg-danger bg-gradient-secondary">
         <div class="container">
-            <h1 class="display-4 text-white" >The Project</h1>
+            <h1 class="display-4 text-white" >Sources</h1>
             <p class="lead text-white">Data science applied to identifying the bad actors in the illicit sex and human trafficking trade which seem to be increasingly operating from shadows of the spa industry.            
             </p>
             <p class="lead text-white">           
@@ -65,7 +52,7 @@ elseif($conn){
       <div class="col-md-5 align-self float-left">
           
           <!-- <div class="card card mb-3 border-0"> -->
-          <h3>Low percentages at first glance</h3>
+          <h3>Under 40 reviews</h3>
                   <p>Lorem ipsum dolor sit amet, vel ei malorum aliquid veritus, sed an nisl accusamus, 
                   no duis molestiae vim. Ut amet tation vis, sit in dolore sapientem, elitr argumentum vim an.
                    Summo abhorreant in his, ea habeo ullum conclusionemque sed. At per alii prompta, nominavi necessitatibus est ea.
@@ -74,7 +61,7 @@ elseif($conn){
                   sed. At per alii prompta, nominavi necessitatibus est ea.</p>
       </div>
 
-    <div class="col-md-7 float-right">
+      <div class="col-md-7 float-right">
         <iframe width="600" height="371" seamless frameborder="0" scrolling="no" 
         src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTTuchWV6hZLsOyoenOPfGuU_i7q5pVgSrsErhVinqVS9kmapKorFIoeh8TjNqB2isiZ2D7SasHFERa/pubchart?oid=311304930&amp;format=interactive">
         </iframe>      
@@ -274,8 +261,8 @@ elseif($conn){
                 
 
                 
- </div>   <!-- end of iframe -->
- </div>   <!-- end of row -->
+        </div>   <!-- end of iframe -->
+    </div>   <!-- end of row -->
 </div>   <!-- end of container -->
 
 
