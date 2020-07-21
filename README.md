@@ -1,28 +1,25 @@
 ### Legal or Illicit
 
 ### About
-This project explores the potential effects of weakened massage therapy regulation as the industry seems to be experiencing a decline of reputation in San Diego.
+Forensic data analysis of illicit vs. legitimate massage industry in San Diego, CA.
+Webscraping, API and CSV production scripts are in the "merged_massage_data" repository.
 
-
-### <a href="https://sherirosalia.github.io/ufo_sightings/">Link</a>
 ### Frameworks
-Back end database management and integration is based on PHP, Javascript and SQl. 
-Bootstrap 4 provides the majority of front end HTMl
-Google Maps, Plotly, Google Sheets and Chart.js fuel maps, charts and interactive displays.
-Supporing data and files associated with scraping reside in other repositories. Although some data was available for download, much was obtaines using Python Scrapy and normalized with Python and Python Pandas library.
+HTML, CSS and PLOTLY
 
-### Please note
-This is a first draft, and a work in progress. The next steps will be to anonymize data results and organize folders. 
+### Contents
+Supporting data is in "data" folder.
+Maps are produced using Plotly and are in "html_inclusions" file.
 
-### Trigger warning
-Some of the content is unintentionally explicit due to the nature of the nature of the advertising sites incorporated into the datasets.
+
+### Website
+### <a href="https://sherirosalia.github.io/Legal-or-Illicit-/">Legal or Illicit</a>
 
 ### Landing Page
-<img height="450" alt="landing page" src="img/landing_page.png">
+<img height="450" alt="yelp vs rubs" src="images/yelp_vs_rub.png">
 
 ### Mapping Business Types
-<img height="450" alt="1999 Orange Comment" src="img/yelp_rub_compare.png">
+<img height="450" alt="ratings comparisons" src="images/ratings_profile.png">
 
-### Across the USA
-<img height="450" alt="1999 Orange Comment" src="img/usa_mapped.png">
-
+### Provider movement between establishments
+<img height="450" alt="provider movement" src="images/movement.png">
